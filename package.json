@@ -1,0 +1,27 @@
+{
+  "name": "rocketseat-gobarber-api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/mCodex/rocketseat-gobarber-api.git",
+  "author": "Mateus Andrade <mat.andrade@live.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "dev:debug": "nodemon --inspect src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
+  }
+}
