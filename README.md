@@ -1,5 +1,7 @@
 # Rocketseat's GoBarber API
 
+A project built only for studying purposes which is a management platform for barber shops.
+
 ## 📚 Libraries:
 
 * [ExpressJS](https://expressjs.com/) 
@@ -7,6 +9,8 @@
 * [Airbnb's ESlint](https://www.npmjs.com/package/eslint-config-airbnb)
 * [Nodemon](https://nodemon.io/)
 * [Sucrase](https://sucrase.io/) - For ES6+ support
+* [Sequelize](https://sequelize.org/) - Database ORM
+* [JWT](https://jwt.io/)
 
 ## 📦 Installation
 
