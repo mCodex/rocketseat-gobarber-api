@@ -11,6 +11,7 @@ A project built only for studying purposes which is a management platform for ba
 * [Sucrase](https://sucrase.io/) - For ES6+ support
 * [Sequelize](https://sequelize.org/) - Database ORM
 * [JWT](https://jwt.io/)
+* [Multer](https://www.npmjs.com/package/multer)
 
 ## 📦 Installation
 
