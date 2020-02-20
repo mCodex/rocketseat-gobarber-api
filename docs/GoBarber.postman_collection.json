@@ -22,7 +22,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"mateus\",\n\t\"email\": \"mao2e@te0ste.com\",\n\t\"password\": \"121212121\"\n}",
+							"raw": "{\n\t\"name\": \"mateus\",\n\t\"email\": \"mat.andrade@live.com\",\n\t\"password\": \"123456\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -49,7 +49,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTgxMTIyNTgxLCJleHAiOjE1ODE3MjczODF9.Dy3P8vFR5zAxC9pBijBvvW4pQcrJTtLigq2qRlQQvAM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgxMTYzODExLCJleHAiOjE1ODE3Njg2MTF9.tLokRLWOubw1Nck9IuLsiIzRmtbjXGsxoOR_QzrJcek",
 									"type": "string"
 								}
 							]
@@ -65,7 +65,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"123\",\n\t\"email\": \"mao2e@te0ste.com\",\n\t\"oldPassword\": \"121212121\",\n\t\"password\": \"1234\"\n}",
+							"raw": "{\n\t\"email\": \"mat.andrade@live.com\",\n\t\"oldPassword\": \"1234567\",\n\t\"password\": \"123456\",\n\t\"confirmPassword\": \"123456\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -93,6 +93,16 @@
 				{
 					"name": "Create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgxMTYzODExLCJleHAiOjE1ODE3Njg2MTF9.tLokRLWOubw1Nck9IuLsiIzRmtbjXGsxoOR_QzrJcek",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -104,7 +114,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"mao2e@te0ste.com\",\n\t\"password\": \"121212121\"\n}",
+							"raw": "{\n\t\"email\": \"mao2e@te0ste.com\",\n\t\"password\": \"123456\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -125,11 +135,298 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgxMTYzODExLCJleHAiOjE1ODE3Njg2MTF9.tLokRLWOubw1Nck9IuLsiIzRmtbjXGsxoOR_QzrJcek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/files",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Providers",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgyMDY4ODI0LCJleHAiOjE1ODI2NzM2MjR9.NuXonLp4dajsA5YuFo90PLkcP9Vjq8hT2h3eGx4XFx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"provider_id\": 4,\n\t\"date\": \"2020-08-18T22:30:00-03:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/appointments",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgyMDY4ODI0LCJleHAiOjE1ODI2NzM2MjR9.NuXonLp4dajsA5YuFo90PLkcP9Vjq8hT2h3eGx4XFx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"provider_id\": 4,\n\t\"date\": \"2020-08-18T22:30:00-03:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/appointments/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"appointments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgyMDY4ODI0LCJleHAiOjE1ODI2NzM2MjR9.NuXonLp4dajsA5YuFo90PLkcP9Vjq8hT2h3eGx4XFx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/appointments",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Schedule",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTgyMDcxNzM2LCJleHAiOjE1ODI2NzY1MzZ9.lOGpYlmdmW41c8mPk8TNtDK-tI1RM8r0qEwIlBnnI0Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/schedule?date=2020-05-30T00:00:00-03:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"schedule"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2020-05-30T00:00:00-03:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTgyMjM5MTgyLCJleHAiOjE1ODI4NDM5ODJ9.BGBPIKh8OBmn4nzaVTJgz5ZQDFMMmF7bn6dOVlm_Os4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/notifications",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTgyMjM5MTgyLCJleHAiOjE1ODI4NDM5ODJ9.BGBPIKh8OBmn4nzaVTJgz5ZQDFMMmF7bn6dOVlm_Os4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/notifications/5e4f0c5a5f70a60e1a4c4c26",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"notifications",
+								"5e4f0c5a5f70a60e1a4c4c26"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"variable": [
 		{
-			"id": "70a64b93-dc34-470d-9ae9-491193c4df65",
+			"id": "a1bf1831-a273-4852-a52d-5610743a5182",
 			"key": "baseURL",
 			"value": "http://localhost:3333",
 			"type": "string"
