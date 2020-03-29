@@ -17,6 +17,8 @@ A project built only for studying purposes which is a management platform for ba
 * [Redis](https://redis.io/)
 * [Bee-Queue](https://bee-queue.com/)
 * [dotenv](https://github.com/motdotla/dotenv)
+* [express-brute](https://www.npmjs.com/package/express-brute)
+* [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
 
 ## 📦 Installation
 
